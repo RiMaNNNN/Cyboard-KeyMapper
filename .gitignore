@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+backend/.venv/
+backend/data/logs/
+backend/data/backups/
+backend/data/firmware_workspace/
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins*
+frontend/.packages
+.pytest_cache/
+*.egg-info/
+backend/data/macros.json
+backend/data/battery_alert.json
+backend/data/power.json
+backend/data/locking.json
+backend/data/trackballs.json
+rename_to_keymapper.bat
+
+# Never track: cropped-from-vendor artwork and unlicensed upstream reference
+# copies stay local-only (see THIRD_PARTY_NOTICES.md for their sources).
+frontend/assets/left-hand-icon.png
+frontend/assets/right-hand-icon.png
+backend/proto/reference/imprint-layouts.dtsi
+backend/proto/reference/template_imprint.keymap

@@ -1,0 +1,53 @@
+# KeyMapper backend configuration. Every value here is user-tunable; ranges are
+# enforced at startup (see entities.Parameters). Edit and restart the server.
+
+server:
+  # Bind address of the local HTTP server. 127.0.0.1 keeps the keyboard API
+  # private to this machine; any other value exposes it to the network.
+  host: "127.0.0.1"
+  # TCP port of the HTTP server (1024-65535). The KeyMapper.bat launcher and the
+  # browser URL follow this value.
+  port: 8756
+  # Seconds with zero connected browser tabs after which the server exits by
+  # itself (5-3600). Short = closes quickly after you close the tab; long =
+  # survives slow reloads. Before the first tab ever connects, ten times this
+  # value applies so a slow first browser start is not cut off.
+  ui_disconnect_shutdown_s: 20
+
+device:
+  # USB identity of the keyboard's Studio serial interface. ZMK's defaults are
+  # vid 0x1D50 / pid 0x615E and the Imprint firmware does not override them.
+  usb_vid: 0x1D50
+  usb_pid: 0x615E
+  # Case-insensitive substring matched against the port's product/description
+  # text as a secondary discovery signal when several devices share the IDs.
+  product_hint: "Imprint"
+  # Per-request timeout in seconds (0.5-60). The keyboard answers within
+  # milliseconds when healthy; raise only for debugging.
+  rpc_timeout_s: 5.0
+  # Seconds between automatic discovery scans while disconnected (0.5-60).
+  reconnect_interval_s: 2.0
+
+backup:
+  # How many most-recent backup files to keep (1-10000); older ones are pruned
+  # after each new backup is written.
+  keep_last: 100
+
+firmware:
+  # Name of the GitHub repository (under your account) that stores the
+  # generated firmware configuration. Created from the template when missing.
+  repo_name: "keymap-imprint-firmware"
+  # Upstream template the repository is created from.
+  template_owner: "Cyboard-DigitalTailor"
+  template_repo: "zmk-user-config-template"
+  # Tag of Cyboard's zmk-keyboards module pinned by the template's west.yml;
+  # recorded in generated files for traceability.
+  keyboard_tag: "v2026.07"
+  # Maximum seconds to wait for the GitHub Actions build (60-7200). The
+  # documented build takes about two minutes.
+  build_timeout_s: 900
+  # Extra behavior-queue slots added on top of the combined need of all
+  # generated macros when sizing CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE (0-512). Each
+  # tapped step costs two slots; slack absorbs other behaviors firing while a
+  # macro plays.
+  behaviors_queue_slack: 16

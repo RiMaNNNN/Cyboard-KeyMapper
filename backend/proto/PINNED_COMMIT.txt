@@ -1,0 +1,1 @@
+zmkfirmware/zmk-studio-messages @ 6cb4c283e76209d59c45fbcb218800cd19e9339d (pinned 2026-08-19; wire-compatible with Cyboard Studio bundle: core=3, behaviors=4, keymap=5, requestId=1)
