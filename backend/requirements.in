@@ -7,7 +7,7 @@ pyserial==3.5
 protobuf==7.35.1
 grpcio-tools==1.83.0
 pydantic==2.12.4
-python-dotenv==1.1.1
+python-dotenv==1.2.2
 PyYAML==6.0.3
 bleak==3.0.2
 pytest==8.4.2
