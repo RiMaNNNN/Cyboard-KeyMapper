@@ -10,5 +10,5 @@ pydantic==2.12.4
 python-dotenv==1.1.1
 PyYAML==6.0.3
 bleak==3.0.2
-pytest==8.4.2
+pytest==9.0.3
 httpx==0.28.1

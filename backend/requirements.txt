@@ -4,7 +4,7 @@ anyio==4.14.2
 bleak==3.0.2
 certifi==2026.7.22
 click==8.4.2
-colorama==0.4.6
+dbus-fast==5.0.22
 fastapi==0.141.1
 grpcio==1.83.0
 grpcio-tools==1.83.0
@@ -18,25 +18,16 @@ packaging==26.3
 pluggy==1.6.0
 protobuf==7.35.1
 pydantic==2.12.4
-pydantic_core==2.41.5
-Pygments==2.21.0
+pydantic-core==2.41.5
+pygments==2.21.0
 pyserial==3.5
-pytest==8.4.2
+pytest==9.0.3
 python-dotenv==1.1.1
-PyYAML==6.0.3
-setuptools==84.0.0
+pyyaml==6.0.3
 starlette==1.6.0
+typing-extensions==4.16.0
 typing-inspection==0.4.4
-typing_extensions==4.16.0
-uvicorn==0.52.3
+uvicorn[standard]==0.52.3
+uvloop==0.22.1
 watchfiles==1.2.0
 websockets==17.0.1
-winrt-runtime==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Devices.Bluetooth==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Devices.Bluetooth.Advertisement==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Devices.Bluetooth.GenericAttributeProfile==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Devices.Enumeration==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Devices.Radios==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Foundation==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Foundation.Collections==3.2.1 ; sys_platform == 'win32'
-winrt-Windows.Storage.Streams==3.2.1 ; sys_platform == 'win32'
